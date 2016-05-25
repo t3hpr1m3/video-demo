@@ -18,4 +18,4 @@ ADD . /usr/src/app
 
 EXPOSE 3000
 
-CMD ["bundle", "exec", "unicorn", "-c", "config/unicorn.rb"]
+CMD ["bundle", "exec", "unicorn", "-c", "config/unicorn.rb", "-p", "3000"]
