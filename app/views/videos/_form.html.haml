@@ -1,0 +1,11 @@
+= form_for @video do |f|
+  = field_set_tag do
+    %dl.formfields
+      %dt= f.label :title
+      %dd= f.text_field :title, size: 20
+      %dt= f.label :category
+      %dd= f.text_field :category, size: 20
+      %dt= f.label :location
+      %dd= f.select(:location, options_for_select(us_states))
+    %p.centertext
+      = f.submit 'Save'
